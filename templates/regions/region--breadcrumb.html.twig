@@ -1,0 +1,10 @@
+{% extends 'region.html.twig' %}
+
+{%
+  set classes = [
+    'd-none',
+    'd-sm-block',
+  ]
+%}
+
+{% do attributes.addClass(classes) %}

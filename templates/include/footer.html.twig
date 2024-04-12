@@ -1,0 +1,41 @@
+<footer role="contentinfo" class="site-footer">
+	{% block footer %}
+		<div class="container">
+			<div class="row site-footer__top">
+				<div class="col-12 col-lg-5">
+					{% if page.footer_first %}
+						{{ page.footer_first }}
+					{% endif %}
+				</div>
+				<div class="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-lg-end gap-5">
+					{% if page.footer_second %}
+						{{ page.footer_second }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			{% if page.footer_third %}
+				<div class="row site-footer__border site-footer__middle">
+					<div class="col-12 col-lg-8 d-flex align-items-center justify-content-center text-align-center mx-auto">
+						{{ page.footer_third }}
+					</div>
+				</div>
+			{% endif %}
+
+			<div class="row site-footer__border_ site site-footer__bottom small">
+				<div class="col-12 col-lg-8 d-flex align-items-center">
+					{% if page.footer_fourth %}
+						{{ page.footer_fourth }}
+					{% endif %}
+				</div>
+				<div class="col-12 col-lg-4 d-flex align-items-center site-footer__copyright justify-content-lg-end">
+					&#169;
+					{{ "now"|date('Y') }}
+					{{ site_name }}
+				</div>
+			</div>
+		</div>
+	{% endblock footer %}
+</footer>

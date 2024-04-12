@@ -1,0 +1,50 @@
+.icon {
+  &--facebook {
+    &::before,
+    &-suffix::after {
+      font: var(--fa-font-brands);
+      content: '\f39e';
+    }
+  }
+
+  &--arrow-up-right {
+    &::before,
+    &-suffix::after {
+      font: var(--fa-font-sharp-solid);
+      content: '\e09f';
+    }
+  }
+
+  &--dropdown {
+    &::after {
+      font: var(--fa-font-solid);
+      content: '\f107';
+    }
+  }
+
+  &--circle-info {
+    &::before {
+      font: var(--fa-font-sharp-regular);
+      content: '\f05a';
+    }
+  }
+}
+
+[class^='icon--'] {
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  >.svg-inline--fa {
+    padding-bottom: 0;
+
+    &[data-fa-pseudo-element="::before"] {
+      @include rem(padding-right, $padding-small);
+    }
+
+    &[data-fa-pseudo-element="::after"] {
+      @include rem(padding-left, $padding-small);
+    }
+  }
+}

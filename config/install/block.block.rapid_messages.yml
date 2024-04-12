@@ -1,0 +1,15 @@
+en
+true -
+system -
+  rapid
+rapid_messages
+rapid
+messages-
+7
+null
+system_messages_block
+system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  system
+{}

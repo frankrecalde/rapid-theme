@@ -1,0 +1,19 @@
+en
+true -
+system.menu.account -
+  system -
+  rapid
+rapid_account_menu_mobile
+rapid
+mobile_menu-
+6
+null
+plugin: 'system_menu_block:account'
+id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  system
+  1
+  0
+  false
+{}

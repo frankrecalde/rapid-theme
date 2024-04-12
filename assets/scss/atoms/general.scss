@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $clr-bg;
+  font-size: $font-size-base;
+}
+
+p {
+  @include rem(padding-bottom, 30px);
+
+  margin-bottom: 0;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  @include full-width;
+}
+
+ul,
+ol {
+  &.row {
+    padding: 0;
+    list-style: none;
+  }
+
+  &.column-list {
+    @include rem(padding-left, $padding-base);
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.column-list {
+      &--two {
+        column-count: 2;
+      }
+
+      &--three {
+        column-count: 3;
+      }
+
+      &--four {
+        column-count: 4;
+      }
+
+      li {
+        @include rem(padding-right, $padding-large);
+        @include rem(padding-bottom, $padding-small);
+      }
+    }
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+ul,
+ol {
+  &.row {
+    padding: 0;
+    list-style: none;
+  }
+}

@@ -1,0 +1,47 @@
+name: Rapid Theme
+description: |
+  A bootstrap5 theme for rapid development.
+
+type: theme
+'base theme': stable9
+starterkit: true
+core_version_requirement: ^9.5 || ^10
+php: 8.1
+
+ckeditor5-stylesheets:
+  - dist/assets/ckeditor.css
+
+libraries:
+  - rapid/app
+
+libraries-override:
+  gin/ajax: false
+  gin/dialog: false
+  gin/media_library: false
+  layout_discovery/onecol: false
+  layout_discovery/twocol: false
+  claro/claro.drupal.dialog: false
+  webform/webform.composite: false
+
+regions:
+  alerts: Alerts
+  branding: Branding
+  utility: Utility
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  messages: Messages
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  mobile_menu: 'Mobile menu'
+  hidden: Hidden
+
+dependencies:
+  - core:help
+  - core:menu_ui
+  - core:menu_link_content

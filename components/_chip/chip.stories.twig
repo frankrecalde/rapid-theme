@@ -1,0 +1,18 @@
+{% stories chip with { title: 'SDC/Examples/Chip' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: {
+      dismissable: true,
+      color: 'primary',
+    }
+  } %}
+<div>
+{{ include('rapid:chip', {
+    dismissable,
+    color
+  }) }}
+</div>
+{% endstory %}
+
+{% endstories %}

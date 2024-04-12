@@ -1,0 +1,61 @@
+// Important: This file is added to every entrypoint scss.
+// Do not add any CSS in this file. Only variables.
+
+@import 'bootstrap/scss/functions';
+
+// Variables come next
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+
+// Optional variable overrides here
+
+// Palette colors.
+$palette-white:              #FFF;
+$palette-black:              #000;
+$palette-firefly:              #071219;
+$palette-eastern-blue:       #1987B4;
+$palette-keppel:             #38AEAA;
+$palette-bon-jour:           #EAE8E9;
+$palette-scorpion:           #565656;
+$palette-silver:             #BBBABA;
+$transparent:                rgba(255, 255, 255, 0);
+
+// Defaults.
+$grid-gutter-width: 36px;
+$baseline-px: 16px;
+
+// Content
+$content-width-narrow: 968px;
+
+// VW variables
+$vw-content-width-desktop: 1920px;
+$vw-content-width-mobile: 375px;
+
+// Padding variables
+$padding-base: 16px;
+$padding-base-small:             $padding-base * 0.875;           //14px
+$padding-base-extra-small:       $padding-base * 0.75;            //12px
+$padding-extra-small:            $padding-base * 0.25;            //4px
+$padding-small:                  $padding-base * 0.5;             //8px
+$padding-large:                  $padding-base * 1.25;            //20px
+$padding-extra-large:            $padding-base * 1.5;             //24px
+$padding-spacing-small:          $padding-large * 2;              //40px
+$padding-spacing-medium:         $padding-base * 3;               //48px
+$padding-spacing-extra-medium:   56px;
+$padding-spacing-large:          $padding-base * 4;               //64px
+$padding-spacing:                $padding-large * 4;              //80px
+$padding-spacing-extra-large:    $padding-spacing-small * 3;      //120px
+
+// Scrolling.
+$enable-smooth-scroll: false;
+
+// Border radius
+$button-border-radius: 30px;
+
+// Animation.
+$animation-duration: 200ms;
+
+// Rest of bootstrap imports
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';

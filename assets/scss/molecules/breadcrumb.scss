@@ -1,0 +1,11 @@
+.breadcrumb-item {
+  + .breadcrumb-item {
+    @include rem(padding-left, $padding-base);
+
+    &::before {
+      @include rem(padding-right, $padding-base);
+
+      content: var(--bs-breadcrumb-divider, "•");
+    }
+  }
+}

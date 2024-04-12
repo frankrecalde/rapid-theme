@@ -1,0 +1,86 @@
+.site-footer {
+  background-color: $clr-footer-bg;
+
+  h4, h5 {
+    @include rem(padding-bottom, $padding-base);
+
+    margin-bottom: 0;
+  }
+
+   ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  p {
+    padding-bottom: 0;
+  }
+
+  .site-branding__logo {
+    @include rem(padding-bottom, $padding-base * 2);
+  }
+
+  .nav-link {
+    @include rem(margin-right, $padding-extra-large);
+
+    padding: 0;
+  }
+
+  &__top {
+    @include rem(padding, $padding-spacing-medium 0);
+
+    li {
+      @include rem(padding-bottom, $padding-base);
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    @include rem(padding-top, $padding-spacing-small);
+    @include rem(padding-bottom, $padding-spacing-extra-medium);
+
+    nav {
+      @include rem(margin-bottom, $padding-extra-large);
+    }
+  }
+
+  &__middle {
+    @include rem(padding, $padding-spacing-medium 0);
+  }
+
+  &__border {
+    @include rem(border-top-width, 1px);
+    @include rem(border-bottom-width, 1px);
+
+    width: 98%;
+    margin: 0 auto;
+    border-top-style: solid;
+    border-top-color: $palette-silver;
+    border-bottom-style: solid;
+    border-bottom-color: $palette-silver;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__top {
+      @include rem(padding-top, $padding-spacing-extra-large);
+      @include rem(padding-bottom, $padding-spacing);
+    }
+
+    &__border {
+      width: 100%;
+    }
+
+    &__bottom {
+      nav {
+        margin-bottom: 0;
+      }
+    }
+
+    &__middle {
+      @include rem(padding, $padding-spacing-large 0);
+    }
+  }
+}

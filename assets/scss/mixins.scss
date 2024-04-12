@@ -1,0 +1,91 @@
+//Pixels to rem conversion
+@mixin rem($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: calc($baseline-px / 1rem);
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values)=="number" {
+    #{$property}: calc($px-values / $baseline-rem);
+  }
+
+  @else {
+    // Create an empty list that we can dump values into
+    $rem-values: unquote("");
+
+    @each $value in $px-values {
+
+      // If the value is zero, return 0
+      @if $value ==0 {
+        $rem-values: append($rem-values, $value);
+      }
+
+      @else if $value =="auto" {
+        $rem-values: append($rem-values, auto);
+      }
+
+      @else {
+        $rem-values: append($rem-values, calc($value / $baseline-rem));
+      }
+    }
+
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+  }
+}
+
+@mixin make-button($background, $border, $colour, $hover-colour, $hover-background) {
+  @include rem(border-radius, $button-border-radius);
+  @include rem(border-width, 3px);
+  @include rem(padding, 14px 40px);
+
+  color: $colour;
+  border-color: $border;
+  background: $background;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: $hover-colour;
+    border-color: $hover-background;
+    background: $hover-background;
+
+    a {
+      text-decoration: none;
+      color: $colour;
+
+      &:hover {
+        text-decoration: none;
+        color: $hover-colour;
+
+        svg > path {
+          fill: $hover-colour;
+        }
+      }
+
+      svg > path {
+          fill: $colour;
+        }
+    }
+  }
+
+  &:active {
+    border: 1px solid $hover-colour;
+  }
+
+  a {
+    color: $hover-colour;
+  }
+}
+
+@mixin full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

@@ -1,0 +1,19 @@
+en
+true -
+system.menu.main -
+  system -
+  rapid
+rapid_main_menu
+rapid
+primary_menu
+0
+null
+plugin: 'system_menu_block:main'
+id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  system
+  1
+  3
+  true
+{}

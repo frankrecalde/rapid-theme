@@ -1,0 +1,74 @@
+.banner {
+  @include full-width;
+  @include rem(padding, 65px 0);
+  @include rem(margin-bottom, 50px);
+
+  display: grid;
+
+  h1 {
+    padding-bottom: 0;
+  }
+
+  p {
+    @include rem(font-size, 24px);
+
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__image {
+    @include rem(min-height, 210px);
+    @include rem(top, -65px);
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    order: -1;
+  }
+
+  &__content-background {
+    color: $clr-text;
+    background-color: $clr-banner-bg;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include rem(margin-bottom, 100px);
+
+    padding: 0;
+
+    p {
+      @include rem(font-size, 24px);
+      @include rem(line-height, 36px);
+    }
+
+    &__content {
+      width: 90%;
+    }
+
+    &__content-background--with-image {
+      .banner__wrapper {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    &__content-background--with-image,
+    &__content-background--no-image {
+      @include rem(min-height, 473px);
+    }
+
+    &__image {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-size: cover;
+    }
+
+    &__wrapper {
+      width: 45%;
+    }
+  }
+}

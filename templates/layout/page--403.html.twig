@@ -1,0 +1,22 @@
+{% extends  "page.html.twig" %}
+{% block content %}
+	<div id="main" class="{{ container }} page-not-found">
+		{% if breadcrumbs is not empty %}
+			{{ breadcrumbs }}
+		{% endif %}
+		<div class="row text-center py-5">
+			<div class="col-12 py-5">
+				<h1>Sorry, this page isn’t accessible.</h1>
+			</div>
+			<div class="col-12">
+				<h2>403 - Forbidden</h2>
+			</div>
+			<div class="col-12 py-5">
+				<hr>
+			</div>
+			<div class="col-12 pb-5">
+				<p>Try clearing your cache and cookies or you might also need to login to access this page.</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}

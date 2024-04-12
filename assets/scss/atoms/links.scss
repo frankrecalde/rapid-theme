@@ -1,0 +1,15 @@
+.toolbar-menu {
+  a:not(.btn) {
+    color: $palette-scorpion;
+  }
+}
+
+a:not(.btn),
+.link:not(.btn) {
+  text-decoration: none;
+  color: $clr-global-links;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

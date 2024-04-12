@@ -1,0 +1,16 @@
+en
+true -
+rapid
+rapid_primary_local_tasks
+rapid
+content-
+5
+null
+local_tasks_block
+local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  core
+  true
+  false
+{}

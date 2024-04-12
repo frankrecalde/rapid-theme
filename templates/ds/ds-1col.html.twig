@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+{%
+  set classes = [
+    'ds-1col',
+    'clearfix',
+    content_width
+  ]
+%}
+
+{% if content_width and content_width is defined %}
+{% endif %}
+
+<{{ ds_content_wrapper }}{{ attributes.addClass(classes) }}>
+
+  {{ title_suffix.contextual_links }}
+
+  {{ ds_content }}
+
+</{{ ds_content_wrapper }}>

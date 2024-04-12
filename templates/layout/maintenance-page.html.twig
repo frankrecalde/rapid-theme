@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+
+
+<header role="banner" class="site-header bg-light">
+<div class="container py-5 mx-auto text-center">
+
+		{% include '@rapid/block/block--system-branding-block.html.twig' %}
+	</div>
+</header>
+
+{% block content %}
+	<div id="main" class="{{ container }}">
+		<div class="row text-center py-5">
+			<div class="col-12 py-4">
+				{% if title %}
+					<h1>{{ title }}</h1>
+				{% endif %}
+			</div>
+			<div class="col-12 col-lg-5 mx-auto">
+				{{ page.highlighted }}
+				<h3>{{ page.content }}</h3>
+			</div>
+		</div>
+	</div>
+{% endblock %}

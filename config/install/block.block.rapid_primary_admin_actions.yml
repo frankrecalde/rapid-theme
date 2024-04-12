@@ -1,0 +1,14 @@
+en
+true -
+rapid
+rapid_primary_admin_actions
+rapid
+content-
+6
+null
+local_actions_block
+local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  core
+{}

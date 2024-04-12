@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Page settings.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function rapid_preprocess_page(array &$variables) {
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+}
+

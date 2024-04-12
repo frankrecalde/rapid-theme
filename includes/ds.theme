@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * DS alterations.
+ */
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+ * Implements preprocess ds_1col.
+ */
+function rapid_preprocess_ds_1col(array &$variables) {
+  if (
+    isset($variables['content'])
+    && is_array($variables['content'])
+    && isset($variables['content']['#paragraph'])
+    && $variables['content']['#paragraph'] instanceof ParagraphInterface
+  ) {
+    $paragraph = $variables['content']['#paragraph'];
+    $wideComponents = [
+      'banner',
+      'cta'
+    ];
+
+    if (!in_array($paragraph->getParagraphType()->id(), $wideComponents)) {
+      $parent = $paragraph->getParentEntity();
+      if ($parent instanceof NodeInterface) {
+        $variables['content_width'] = 'mx-auto col-12 col-lg-8';
+      }
+    }
+
+    if (
+      $paragraph->getParagraphType()->id() === 'banner'
+      && $paragraph->hasField('field_content')
+    ) {
+      $variables['banner_image_class'] = 'banner__content-background--no-image';
+      if (
+        $paragraph->hasField('field_image')
+        && !empty($paragraph->field_image->getValue())
+      ) {
+        $bgImageUri = $paragraph->field_image->entity->field_media_image->entity->getFileUri();
+        $style = ImageStyle::load('max_2600x2600');
+        $uri = $style->buildUrl($bgImageUri);
+        $variables['bg_image'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+        $variables['banner_image_class'] = 'banner__content-background--with-image';
+      }
+    }
+  }
+}

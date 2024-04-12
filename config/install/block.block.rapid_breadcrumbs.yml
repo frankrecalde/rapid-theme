@@ -1,0 +1,15 @@
+en
+true -
+system -
+  rapid
+rapid_breadcrumbs
+rapid
+breadcrumb-
+6
+null
+system_breadcrumb_block
+system_breadcrumb_block
+  Breadcrumbs
+  label_display: '0'
+  system
+{}

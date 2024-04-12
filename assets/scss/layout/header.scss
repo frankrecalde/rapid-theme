@@ -1,0 +1,85 @@
+// Very top of page, eg beta bar.
+.region-alerts {
+  --bs-link-color-rgb: var(--bs-dark-rgb);
+  --bs-link-hover-color-rgb: var(--bs-dark-rgb);
+}
+
+.site-header {
+  // Generic links.
+  --bs-link-color-rgb: var(--bs-white-rgb);
+  --bs-link-hover-color-rgb: var(--bs-teal-rgb);
+
+  // Nav links.
+  --bs-link-color: var(--bs-white);
+  --bs-link-hover-color: var(--bs-teal);
+
+  &__utility {
+    @include rem(padding-left, $padding-extra-large);
+
+    border-left: 1px $clr-borders solid;
+  }
+}
+
+// Fix devel z-indexes.
+.region-messages {
+  position: relative;
+  z-index: 1;
+}
+
+// Square up as its 100% width.
+.region-messages .alert,
+.region-messages .messages {
+  --bs-alert-border-radius: 0;
+  --bs-alert-margin-bottom: 0;
+}
+
+.offcanvas-header {
+  padding: 0;
+}
+
+.offcanvas.offcanvas-end {
+  border: 0;
+}
+
+// This also appears on the maintenance page.
+.site-branding {
+  @include transition;
+
+  text-decoration: none;
+
+  &__logo {
+    max-width: clamp(5rem, 7vw, 20vw);
+
+    img {
+      max-height: clamp(5rem, 7vw, 15rem);
+    }
+  }
+
+  &__slogan {
+    @include rem(padding-bottom, $padding-spacing-medium);
+
+    color: $clr-branding-text;
+    font-size: $h6-font-size;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__logo {
+      padding-bottom: 0;
+    }
+
+    &__slogan {
+      padding-bottom: 0;
+      font-size: $h5-font-size;
+    }
+  }
+}
+
+.region-primary-menu {
+  .nav-item {
+    .nav-link {
+      ~ div {
+        width: 50%;
+      }
+    }
+  }
+}

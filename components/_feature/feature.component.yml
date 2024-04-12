@@ -1,0 +1,13 @@
+# featured.component.yml
+name: featured component
+props:
+  type: object
+  properties: {}
+
+slots: # no need to define a schema for the data
+  featuredfirst:
+    title: First
+    description: First slot
+  featuredsecond:
+    title: Second
+    description: Second Slot

@@ -1,0 +1,16 @@
+en
+true -
+rapid
+rapid_secondary_local_tasks
+rapid
+content-
+4
+null
+local_tasks_block
+local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  core
+  false
+  true
+{}

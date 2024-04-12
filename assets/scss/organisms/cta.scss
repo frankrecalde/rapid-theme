@@ -1,0 +1,46 @@
+.cta {
+  @include rem(padding, $padding-base * 2);
+  @include rem(border-radius, 16px);
+
+  background-color: $clr-cta-bg;
+
+  &__link {
+    @include rem(padding-top, $padding-base * 2);
+
+    a {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+  }
+
+  &__layout--centre {
+    text-align: center;
+  }
+
+  h3 {
+    @include rem(padding-bottom, $padding-base);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include rem(padding, $padding-spacing-large 132px);
+
+    &__link {
+      @include rem(padding-top, $padding-spacing-small);
+    }
+
+    &__layout--horizontal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .cta__link {
+        padding-top: 0;
+      }
+
+      .cta__text {
+        max-width: 70%;
+      }
+    }
+  }
+}

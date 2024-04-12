@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Breadcrumb alterations.
+ */
+
+function rapid_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $routeMatch = \Drupal::routeMatch();
+  $pageTitle = \Drupal::service('title_resolver')->getTitle($request, $routeMatch->getRouteObject());
+
+  // Added current this variable will available in twig file.
+  $variables['breadcrumb'][] = [
+    'text' => $pageTitle
+  ];
+
+  $variables['#cache']['contexts'][] = 'url';
+}

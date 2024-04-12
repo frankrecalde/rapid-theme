@@ -1,0 +1,50 @@
+{
+  "name": "iconagency",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/sharp-regular-svg-icons": "^6.5.2",
+    "@fortawesome/sharp-solid-svg-icons": "^6.5.2",
+    "@frankrecalde/es-css-lint-config": "^0.0.3",
+    "accessible-submenu": "^1.0.2",
+    "bootstrap": "^5.3.2",
+    "gsap": "^3.12.5",
+    "hamburgers": "^1.2.1",
+    "photoswipe": "^5.4.3",
+    "select2": "^4.1.0-rc.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "sass": "^1.74.1",
+    "vite": "^5.2.8",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-externals": "^0.6.2",
+    "vite-plugin-live-reload": "^3.0.3",
+    "yaml": "^2.4.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@frankrecalde/es-css-lint-config/drupal"
+    ],
+    "ignorePatterns": [
+      "vite.config.js"
+    ],
+    "root": true
+  },
+  "stylelint": {
+    "extends": [
+      "@frankrecalde/es-css-lint-config/style"
+    ]
+  },
+  "prettier": "@frankrecalde/es-css-lint-config/prettier"
+}

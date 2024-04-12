@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+{%
+  set cta_classes = [
+    'cta',
+    'cta__layout--' ~ paragraph.field_layout.value
+  ]
+%}
+
+{{ title_suffix.contextual_links }}
+
+<div{{content_attributes.addClass(cta_classes)}}>
+	{{ ds_content }}
+</div>

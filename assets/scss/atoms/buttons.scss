@@ -1,0 +1,15 @@
+.btn-primary {
+  @include make-button($clr-btn-primary, $clr-btn-primary, $palette-white, $palette-white, $clr-btn-secondary);
+}
+
+.btn-outline-primary {
+  @include make-button($palette-white, $clr-btn-primary, $clr-btn-primary, $palette-white, $clr-btn-primary);
+}
+
+.btn-secondary {
+  @include make-button($clr-btn-secondary, $clr-btn-secondary, $palette-white, $palette-white, $clr-btn-primary);
+}
+
+.btn-outline-secondary {
+  @include make-button($palette-white, $clr-btn-secondary, $clr-btn-secondary, $palette-white, $clr-btn-secondary);
+}
