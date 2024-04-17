@@ -1,0 +1,17 @@
+// This will conflict with marketing chat popups. Good.
+@import './../../assets/scss/mixins.scss';
+
+.back-to-top {
+  @include rem(padding, 16px 20px);
+  @include rem(bottom, 20px);
+  @include rem(right, 20px);
+
+  margin: 0;
+  position: fixed;
+  display: none;
+  z-index: 9999;
+
+  svg {
+    @include rem(width, 16px);
+  }
+}

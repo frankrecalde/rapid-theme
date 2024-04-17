@@ -1,14 +1,23 @@
-en
-true -
-rapid
-rapid_page_title
-rapid
-content-
-3
-null
-page_title_block
-page_title_block
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rapid
+id: rapid_page_title
+theme: rapid
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
   label: 'Page title'
   label_display: '0'
-  core
-{}
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

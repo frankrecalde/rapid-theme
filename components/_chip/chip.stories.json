@@ -1,1 +1,0 @@
-{"title":"SDC\/Examples\/Chip","parameters":{"server":{"url":"https:\/\/drupal-dev.ddev.site\/storybook\/stories\/render"}},"stories":[{"name":"1. Default","args":{"dismissable":true,"color":"primary"},"parameters":{"server":{"id":"eyJwYXRoIjoidGhlbWVzXC9jdXN0b21cL3JhcGlkXC9jb21wb25lbnRzXC9jaGlwXC9jaGlwLnN0b3JpZXMudHdpZyIsImlkIjoiZGVmYXVsdCJ9"}}}]}

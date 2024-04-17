@@ -17,6 +17,7 @@ import {
   faSquareRss,
   faAngleDown,
   faAngleUp,
+  faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faCircleInfo } from '@fortawesome/sharp-regular-svg-icons';
@@ -61,6 +62,7 @@ export default class Module {
       faAngleDown,
       faAngleUp,
       faCircleInfo,
+      faArrowUp,
     );
   }
 }

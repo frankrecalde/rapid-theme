@@ -29,6 +29,7 @@ h2,
 
 h1, .h1,
 h2, .h2 {
+  @include rem(padding-top, $padding-extra-large);
   @include rem(padding-bottom, $padding-extra-large);
 }
 

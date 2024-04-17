@@ -1,19 +1,24 @@
-en
-true -
-system.menu.account -
-  system -
-  rapid
-rapid_account_menu_mobile
-rapid
-mobile_menu-
-6
-null
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - rapid
+id: rapid_account_menu_mobile
+theme: rapid
+region: mobile_menu
+weight: -6
+provider: null
 plugin: 'system_menu_block:account'
-id: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
   label: 'User account menu'
   label_display: '0'
-  system
-  1
-  0
-  false
-{}
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

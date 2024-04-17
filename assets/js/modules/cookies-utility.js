@@ -6,7 +6,7 @@
 
 export default class Module {
   constructor() {
-    (function (Drupal) {
+    ((Drupal) => {
       Drupal.behaviors.cookiesUtility = {
         createCookie(name, value, hours) {
           let expires;
@@ -19,6 +19,10 @@ export default class Module {
             expires = '';
           }
           document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value) + expires + '; path=/';
+        },
+
+        cookieExists(name) {
+          return document.cookie.split(';').some((item) => item.trim().startsWith(`${name}=`));
         },
 
         readCookie(name) {

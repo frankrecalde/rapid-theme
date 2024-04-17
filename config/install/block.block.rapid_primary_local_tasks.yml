@@ -1,16 +1,19 @@
-en
-true -
-rapid
-rapid_primary_local_tasks
-rapid
-content-
-5
-null
-local_tasks_block
-local_tasks_block
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rapid
+id: rapid_primary_local_tasks
+theme: rapid
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
   label: 'Primary tabs'
   label_display: '0'
-  core
-  true
-  false
-{}
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

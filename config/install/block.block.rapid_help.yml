@@ -1,15 +1,19 @@
-en
-true -
-help -
-  rapid
-rapid_help
-rapid
-help-
-6
-null
-help_block
-help_block
-  Help
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - rapid
+id: rapid_help
+theme: rapid
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
   label_display: '0'
-  help
-{}
+  provider: help
+visibility: {  }

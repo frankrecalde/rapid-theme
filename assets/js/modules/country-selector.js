@@ -6,7 +6,7 @@
 
 export default class Module {
   constructor() {
-    (function ($) {
+    (($) => {
       $(function () {
         const isoCountries = [
           { id: '', text: '' },

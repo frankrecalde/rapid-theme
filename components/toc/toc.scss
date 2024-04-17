@@ -1,0 +1,28 @@
+@import './../../assets/scss/mixins.scss';
+
+.toc {
+  &__title {
+    @include rem(font-size, 24px);
+    @include rem(line-height, 32px);
+    @include rem(padding-bottom, 16px);
+
+    font-weight: $font-weight-bold;
+  }
+
+  &__wrapper {
+    @include rem(padding, $padding-extra-large);
+    @include rem(border-radius, 8px);
+
+    background-color: $palette-bon-jour;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a:not([href]):not([class]) {
+      color: $palette-eastern-blue;
+      text-decoration: underline;
+    }
+  }
+}

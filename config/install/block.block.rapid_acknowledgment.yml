@@ -1,0 +1,25 @@
+uuid: a484ad2a-a4f3-4285-af95-d058214915ab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dd1859c4-aa00-4cc6-ab51-9b1f90d161df'
+  module:
+    - block_content
+  theme:
+    - rapid
+id: rapid_acknowledgment
+theme: rapid
+region: footer_third
+weight: -8
+provider: null
+plugin: 'block_content:dd1859c4-aa00-4cc6-ab51-9b1f90d161df'
+settings:
+  id: 'block_content:dd1859c4-aa00-4cc6-ab51-9b1f90d161df'
+  label: Acknowledgment
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

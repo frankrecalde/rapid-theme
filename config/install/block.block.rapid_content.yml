@@ -1,15 +1,19 @@
-en
-true -
-system -
-  rapid
-rapid_content
-rapid
-content-
-2
-null
-system_main_block
-system_main_block
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rapid
+id: rapid_content
+theme: rapid
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
   label: 'Main page content'
   label_display: '0'
-  system
-{}
+  provider: system
+visibility: {  }

@@ -1,6 +1,6 @@
 export default class Module {
   constructor() {
-    (function ($) {
+    (($) => {
       const Defaults = $.fn.select2.amd.require('select2/defaults');
       const SearchDropdown = $.fn.select2.amd.require('select2/dropdown/search');
 

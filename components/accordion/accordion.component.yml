@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Accordion
+props:
+  type: object
+  required:
+    - toggleAll
+    - togglePosition
+  properties:
+    toggleAll:
+      type: boolean
+      title: Toggle all
+      description: Display a link to open/close all accordions.
+    togglePosition:
+      type: string
+      title: Toggle
+      description: Position of the accordion toggle.
+      enum:
+        - accordion--toggle-left
+        - accordion--toggle-right
+slots:
+  # Content to display in the accordion.
+  accordion:
+    title: Content of the accordion
+    description: The whole accordion

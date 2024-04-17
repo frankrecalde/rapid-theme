@@ -20,7 +20,6 @@
 @import 'drupal/drupal';
 
 // Molecules
-@import 'molecules/back-top';
 @import 'molecules/breadcrumb';
 @import 'molecules/content';
 @import 'molecules/mobile-button';
@@ -28,6 +27,7 @@
 
 // Organisms
 @import 'organisms/mobile-menu';
+@import 'organisms/stats';
 @import 'organisms/primary-menu';
 @import 'organisms/banner';
 @import 'organisms/cta';

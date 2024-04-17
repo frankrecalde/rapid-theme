@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Table of Contents
+description: List of links formed from headlines.
+props:
+  type: object
+  properties:
+    display:
+      type: boolean
+      title: Display Table of Contents

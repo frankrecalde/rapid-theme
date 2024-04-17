@@ -6,7 +6,7 @@
 
 export default class Module {
   constructor() {
-    (function ($, Drupal, localStorage) {
+    (($, Drupal, localStorage) => {
       Drupal.behaviors.geolocation = {
         /**
          * Default settings.

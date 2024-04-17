@@ -1,19 +1,24 @@
-en
-true -
-system.menu.main -
-  system -
-  rapid
-rapid_main_menu_mobile
-rapid
-mobile_menu-
-7
-null
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - rapid
+id: rapid_main_menu_mobile
+theme: rapid
+region: mobile_menu
+weight: -7
+provider: null
 plugin: 'system_menu_block:main'
-id: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
   label: 'Main navigation'
   label_display: '0'
-  system
-  1
-  2
-  true
-{}
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

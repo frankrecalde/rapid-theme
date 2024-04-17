@@ -5,7 +5,7 @@
 
 export default class Module {
   constructor() {
-    (function (Drupal) {
+    ((Drupal) => {
       Drupal.behaviors.countryLocation = {
         /**
          * Get the country location from external service.

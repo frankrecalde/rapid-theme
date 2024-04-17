@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+	{% if display == true %}
+		<div class="toc__wrapper">
+			<div class="toc__title">On this page</div>
+			<div id="toc"></div>
+		</div>
+	{% endif %}
+</div>

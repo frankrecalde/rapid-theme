@@ -2,7 +2,8 @@
  * Rapid toc.js
  */
 
-import DynamicContentMenu from './jquery-dynamic-content-menu';
+// eslint-disable-next-line no-unused-vars, import/no-extraneous-dependencies
+import DynamicContentMenu from 'jquery-dynamic-content-menu';
 
 export default class Module {
   constructor() {

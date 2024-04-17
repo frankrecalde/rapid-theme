@@ -1,0 +1,91 @@
+@import './../../assets/scss/mixins.scss';
+@import './../../assets/scss/variables.scss';
+
+:root {
+  --chevron: url('images/chevron.svg') no-repeat 50% 50%;
+  --plus: url('images/plus.svg') no-repeat 50% 50%;
+  --minus: url('images/minus.svg') no-repeat 50% 50%;
+}
+
+
+.accordion {
+  &-header {
+    padding-bottom: 0;
+  }
+
+  &-body {
+    @include rem(padding, 0 $padding-extra-large $padding-extra-large);
+
+    border-bottom-left-radius:inherit;
+    border-bottom-right-radius:inherit;
+  }
+
+  &-body,
+  &-button {
+    background-color: $palette-alabaster;
+  }
+
+  &-button {
+    @include rem(font-size, 24px);
+    @include rem(padding, $padding-extra-large);
+
+    font-weight: $font-weight-bold;
+    align-items: flex-start;
+
+    .svg-inline--fa {
+      display: none;
+    }
+
+    &:not(.collapsed) {
+      color: inherit;
+      background-color: $palette-alabaster;
+      box-shadow: none;
+    }
+
+    &::after,
+    &:not(.collapsed)::after {
+      @include rem(top, 5px);
+
+      position: relative;
+      background-color: $palette-eastern-blue;
+      background-image: none;
+    }
+
+    &::after {
+      -webkit-mask: var(--chevron);
+      mask: var(--chevron);
+    }
+
+    &:not(.collapsed)::after {
+      -webkit-mask: var(--chevron);
+      mask: var(--chevron);
+    }
+  }
+
+  &-item {
+    border-color: $palette-silver;
+    /* border-left: none;
+    border-right: none;
+
+    &:first-of-type,
+    &:last-of-type {
+      border-radius: unset;
+
+      > .accordion-header .accordion-button,
+      >.accordion-header .accordion-button.collapsed {
+        border-radius: unset;
+      }
+    } */
+  }
+
+  &--toggle-left {
+		.accordion-button {
+			&::after {
+        @include rem(margin-right, 16px);
+
+        order: -1;
+        margin-left: 0;
+			}
+		}
+	}
+}

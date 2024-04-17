@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Back to Top
+description: Button that appears when scrolling down the page and let the user jump back to the top when clicked.
+props:
+  type: object
+  required:
+    - iconType
+  properties:
+    displayButton:
+      type: boolean
+      title: Display button
+    iconType:
+      type: string
+      title: Icon type
+      enum:
+        - chevron-up
+        - arrow-up

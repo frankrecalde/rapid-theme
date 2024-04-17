@@ -1,14 +1,17 @@
-en
-true -
-rapid
-rapid_primary_admin_actions
-rapid
-content-
-6
-null
-local_actions_block
-local_actions_block
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rapid
+id: rapid_primary_admin_actions
+theme: rapid
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
   label: 'Primary admin actions'
   label_display: '0'
-  core
-{}
+  provider: core
+visibility: {  }

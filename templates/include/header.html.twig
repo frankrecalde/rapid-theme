@@ -17,8 +17,11 @@
 						{{ page.secondary_menu }}
 					{% endif %}
 
-					<div class="site-header__utility d-flex border-left ml-3 py-2">
-						<select name="country"></select>
+					<div
+						class="site-header__utility d-flex border-left ml-3 py-2">
+
+						{{ include('rapid:country-selector', { displaySelect: true }) }}
+
 						{% if page.utility %}
 							{{ page.utility }}
 						{% endif %}

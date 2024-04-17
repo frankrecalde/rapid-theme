@@ -49,7 +49,7 @@ export default ({ mode }) => {
 
   const config = {
     plugins: [
-      //eslint(),
+      eslint(),
       liveReload(__dirname + '/**/*.(php|theme|twig|module)'),
       viteExternalsPlugin({
         jquery: 'jQuery',

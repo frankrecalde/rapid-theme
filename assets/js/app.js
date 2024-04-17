@@ -17,7 +17,23 @@ import('./modules/mobile-menu').then(({ default: Module }) => {
   new Module();
 });
 
-import('./modules/back-top').then(({ default: Module }) => {
+import('./modules/toc').then(({ default: Module }) => {
+  new Module();
+});
+
+import('./modules/cookies-utility').then(({ default: Module }) => {
+  new Module();
+});
+
+import('./modules/select2').then(({ default: Module }) => {
+  new Module();
+});
+
+import('./modules/select2-searchInputPlaceholder').then(({ default: Module }) => {
+  new Module();
+});
+
+import('./modules/country-selector').then(({ default: Module }) => {
   new Module();
 });
 
@@ -25,9 +41,7 @@ import('./modules/back-top').then(({ default: Module }) => {
   new Module();
 }); */
 
-/* import('./modules/toc').then(({ default: Module }) => {
-  new Module();
-});
+/*
 
 import('./modules/user-agent').then(({ default: Module }) => {
   new Module();
@@ -37,23 +51,11 @@ import('./modules/geolocation').then(({ default: Module }) => {
   new Module();
 });
 
-import('./modules/cookies-utility').then(({ default: Module }) => {
-  new Module();
-});
-
 import('./modules/country-dialog-box').then(({ default: Module }) => {
   new Module();
 });
 
 import('./modules/country-location').then(({ default: Module }) => {
-  new Module();
-});
-
-import('./modules/select2-searchInputPlaceholder').then(({ default: Module }) => {
-  new Module();
-});
-
-import('./modules/country-selector').then(({ default: Module }) => {
   new Module();
 });
 

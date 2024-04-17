@@ -1,15 +1,19 @@
-en
-true -
-system -
-  rapid
-rapid_messages
-rapid
-messages-
-7
-null
-system_messages_block
-system_messages_block
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rapid
+id: rapid_messages
+theme: rapid
+region: messages
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
   label: 'Status messages'
   label_display: '0'
-  system
-{}
+  provider: system
+visibility: {  }

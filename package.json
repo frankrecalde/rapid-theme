@@ -19,6 +19,7 @@
     "bootstrap": "^5.3.2",
     "gsap": "^3.12.5",
     "hamburgers": "^1.2.1",
+    "jquery-dynamic-content-menu": "^1.0.0",
     "photoswipe": "^5.4.3",
     "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1"

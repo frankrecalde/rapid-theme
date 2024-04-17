@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Country selector
+description: Country select list that stores country code in a cookie.
+props:
+  type: object
+  properties:
+    displaySelect:
+      type: boolean
+      title: Display select list

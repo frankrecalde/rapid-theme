@@ -1,0 +1,7 @@
+<div class="collapse-group">
+	{% if toggleAll == true %}
+		<button class="btn btn-link accordion__toggle--all" type="button">Open all</button>
+	{% endif %}
+	<div class="accordion {{ togglePosition }}" id=" accordion-{{ paragraph.id() }}"> {% block accordion %}{% endblock %}
+		</div>
+	</div>
